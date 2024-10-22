@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>???</title>
+
+    <style>
+        .centraliza{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn{
+            margin: 10px;
+        }
+    </style>
+    
+</head>
+<body class="centraliza">
+
+    <div class="container">
+
+        <h1>Você gosta caldo de cana ?</h1>
+
+        <div>
+
+            <a  class="btn" href="corrida.html"><button>Simm</button></a>
+
+            <button onclick="desvia(this)" onmouseover="desvia(this)" style="position: absolute;">Nãoo</button>
+
+        </div>
+        
+    </div>
+    
+</body>
+
+<script>
+    function sim() {
+        alert("Você aceitou namorar comigo! :)");
+        // redireciona para um URL após clicar no SIM
+        location.href = "https://music.youtube.com/watch?v=izGwDsrQ1eQ";
+    }
+
+    function desvia(btn) {
+        // btn declarado na função
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosicao(10, 90);
+        btn.style.left = geraPosicao(10, 90);
+        console.log('opa, desviei...');
+    }
+
+    function geraPosicao(min, max) {
+        return (Math.random() * (max - min) + min) + "%";
+    }
+
+</script>
+
+
+</html>
